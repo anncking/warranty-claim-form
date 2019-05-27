@@ -21,11 +21,37 @@ if($_POST['button'] && isset($_FILES['attachment']))
 <p>Warranty Claim Submission</p>
 <table>
 <tr><th>name: ".$_POST["name"]."</th></tr>
-<tr><th>email:".$_POST["email"]."</th></tr>
-<tr>
-<td>John</td>
-<td>Doe</td>
-</tr>
+<tr><th>email: ".$_POST["email"]."</th></tr>
+<tr><th>phone number: ".$_POST["phone"]."</th></tr>
+<tr><th>".$_POST["streetaddress1"]."</th></tr>
+<tr><th>".$_POST["streetaddress2"]."</th></tr>
+<tr><th>".$_POST["city"].",".$_POST["state"]." ".$_POST["zipcode"]."</th></tr>
+<tr><th>".$_POST["country"]."</th></tr>
+<tr><th>date purchased: ".$_POST["datePurchased"]."</th></tr>
+<tr><th>defect: ".$_POST["defect"]."</th></tr>
+if(isset($_POST['wherePurchased']))
+{
+<tr><th>purchased from: ".$_POST["wherePurchased"]."</th></tr>
+}
+if(isset($_POST['accident']))
+{
+<tr><th>did the issue occur due to accident? ".$_POST["accident"]."</th></tr>
+}
+if(isset($_POST['style']))
+{
+<tr><th>style ".$_POST["style"]."</th></tr>
+}
+if(isset($_POST['color']))
+{
+<tr><th>style ".$_POST["color"]."</th></tr>
+}
+if(isset($_POST['polarized']))
+{
+<tr><th>style ".$_POST["polarized"]."</th></tr>
+}
+<tr><th>".$_POST["lenscolor"]."</th></tr>
+<tr><th>".$_POST["blackout"]."</th></tr>
+<tr><th>".$_POST["productioncode"]."</th></tr>
 </table>
 </body>
 </html>
