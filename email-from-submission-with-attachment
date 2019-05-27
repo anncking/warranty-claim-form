@@ -1,5 +1,5 @@
 <?PHP
-if($_POST['button'] && isset($_FILES['attachment'])) 
+if($_POST['button'] && isset($_FILES['pic'])) 
 { 
 
 	$from_email = 'sender@abc.com'; //from mail, sender email addrress 
@@ -9,9 +9,8 @@ if($_POST['button'] && isset($_FILES['attachment']))
 	$sender_name = $_POST["name"] //sender name 
 	$reply_to_email = $_POST["email"] //sender email, it will be used in "reply-to" header 
 	$subject = $_POST["phone"] //subject for the email 
-	$message = $_POST["message"] //body of the email
-	
-	
+	//$message = $_POST["message"] //body of the email
+
 	$message = "
 <html>
 <head>
