@@ -2,14 +2,34 @@
 if($_POST['button'] && isset($_FILES['attachment'])) 
 { 
 
-	$from_email		 = 'sender@abc.com'; //from mail, sender email addrress 
-	$recipient_email = 'recipient@xyz.com'; //recipient email addrress 
+	$from_email = 'sender@abc.com'; //from mail, sender email addrress 
+	$recipient_email = 'anncking75@gmail.com'; //recipient email addrress 
 	
 	//Load POST data from HTML form 
-	$sender_name = $_POST["sender_name"] //sender name 
-	$reply_to_email = $_POST["sender_email"] //sender email, it will be used in "reply-to" header 
-	$subject	 = $_POST["subject"] //subject for the email 
-	$message	 = $_POST["message"] //body of the email 
+	$sender_name = $_POST["name"] //sender name 
+	$reply_to_email = $_POST["email"] //sender email, it will be used in "reply-to" header 
+	$subject = $_POST["phone"] //subject for the email 
+	$message = $_POST["message"] //body of the email
+	
+	
+	$message = "
+<html>
+<head>
+<title>Warranty Claim Submission</title>
+</head>
+<body>
+<p>Warranty Claim Submission</p>
+<table>
+<tr><th>name: ".$_POST["name"]."</th></tr>
+<tr><th>email:".$_POST["email"]."</th></tr>
+<tr>
+<td>John</td>
+<td>Doe</td>
+</tr>
+</table>
+</body>
+</html>
+";
 	
 
 	/*Always remember to validate the form fields like this 
