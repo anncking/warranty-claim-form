@@ -1,4 +1,3 @@
-<?PHP
 
 require_once("./include/gatorzform.php");
 
@@ -21,5 +20,3 @@ if(isset($_POST['submitted']))
         $formproc->RedirectToURL("https://dev-liquid.myshopify.com/pages/warranty-claim-form-submitted");
    }
 }
-
-?>
